@@ -45,4 +45,5 @@ Write-Host "✅ CSS and JS files - Styling and interactions" -ForegroundColor Gr
 
 Write-Host ""
 Write-Host "Ready for deployment to GitHub Pages!" -ForegroundColor Green
+
 Write-Host "See DEPLOYMENT_GUIDE.md for instructions." -ForegroundColor Cyan
