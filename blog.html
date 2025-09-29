@@ -10,7 +10,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         /* ... your embedded blog styles unchanged ... */
-        .blog-hero {
+        .blog-hero 
+        <!-- Add after the existing profile image in the Blog Hero section -->
+<div style="flex-shrink: 0;">
+    <img src="images/maryam-profile.jpg" alt="Maryam Arif" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid #34d399; box-shadow: 0 10px 25px rgba(0,0,0,0.3);">
+    <img src="images/maryam-arif-portrait.jpg" alt="Maryam Arif Professional Portrait" style="margin-top: 1rem; width: 120px; border-radius: 15px; box-shadow: 0 8px 30px rgba(0,0,0,0.2);" />
+</div>
+        {
             background: linear-gradient(135deg, #023020 0%, #064e3b 50%, #022c22 100%);
             color: white;
             padding: 150px 0 100px 0;
@@ -236,3 +242,4 @@
     </script>
 </body>
 </html>
+
