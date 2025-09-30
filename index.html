@@ -8,6 +8,77 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Improvement for responsive hero section */
+        .hero-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            align-items: center;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .hero-content {
+            min-width: 300px;
+            flex: 2 1 350px;
+            max-width: 600px;
+        }
+        .hero-image {
+            flex: 1 1 260px;
+            min-width: 220px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .profile-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.13);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .profile-image img {
+            width: 220px;
+            max-width: 80vw;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.09);
+            border: 4px solid #34d399;
+            background: #fff;
+            object-fit: cover;
+        }
+        @media (max-width: 900px) {
+            .hero-container {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            .hero-content, .hero-image {
+                max-width: 100%;
+            }
+            .profile-image img {
+                width: 180px;
+            }
+        }
+        @media (max-width: 600px) {
+            .hero-content {
+                padding: 0;
+            }
+            .profile-card {
+                padding: 1rem;
+            }
+            .profile-image img {
+                width: 140px;
+                border-radius: 16px;
+            }
+        }
+        /* Improve navigation for mobile */
+        .nav-menu {
+            transition: left 0.3s;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -58,7 +129,7 @@
             <div class="hero-image">
                 <div class="profile-card">
                     <div class="profile-image">
-                        <img src="maryam-arif-portrait.jpg" alt="Maryam Arif Professional Portrait" style="margin-top: 2rem; width: 250px; border-radius: 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.2);" />
+                        <img src="maryam-arif-portrait.jpg" alt="Maryam Arif Professional Portrait" />
                     </div>
                 </div>
             </div>
@@ -88,7 +159,7 @@
                         <div class="stat-item">
                             <h3>3,000+</h3>
                             <p>Women Empowered</p>
-
+                        </div>
                         <div class="stat-item">
                             <h3>50+</h3>
                             <p>Articles and Blogs Published</p>
@@ -145,7 +216,6 @@
                         </ul>
                     </div>
                 </div>
-
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
@@ -160,7 +230,6 @@
                         </ul>
                     </div>
                 </div>
-
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
@@ -175,7 +244,6 @@
                         </ul>
                     </div>
                 </div>
-
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
@@ -216,7 +284,6 @@
                         <span class="stat">40% Visibility Increase</span>
                     </div>
                 </div>
-
                 <div class="project-card">
                     <div class="project-header">
                         <i class="fas fa-leaf"></i>
@@ -231,7 +298,6 @@
                         <span class="stat">500+ Customers</span>
                     </div>
                 </div>
-
                 <div class="project-card">
                     <div class="project-header">
                         <i class="fas fa-globe"></i>
@@ -246,7 +312,6 @@
                         <span class="stat">40% Engagement</span>
                     </div>
                 </div>
-
                 <div class="project-card">
                     <div class="project-header">
                         <i class="fas fa-chart-line"></i>
@@ -262,7 +327,6 @@
                     </div>
                 </div>
             </div>
-            
             <!-- View All Projects Button -->
             <div style="text-align: center; margin-top: 3rem;">
                 <a href="projects.html" class="btn btn-primary" style="padding: 15px 30px; font-size: 1.1rem;">
@@ -289,7 +353,6 @@
                         <li>Turkmenistan Olympiad Champion – First Place (May 2024)</li>
                     </ul>
                 </div>
-
                 <div class="achievement-category">
                     <h3><i class="fas fa-handshake"></i> Fellowships</h3>
                     <ul class="achievement-list">
@@ -299,7 +362,6 @@
                         <li>TEDx Guest Speaker on "Moving Mountains"</li>
                     </ul>
                 </div>
-
                 <div class="achievement-category">
                     <h3><i class="fas fa-globe-americas"></i> International Programs</h3>
                     <ul class="achievement-list">
@@ -309,7 +371,6 @@
                         <li>G-7 Ambassadors Conference Certificate of Excellence</li>
                     </ul>
                 </div>
-
                 <div class="achievement-category">
                     <h3><i class="fas fa-book"></i> Publications</h3>
                     <ul class="achievement-list">
@@ -402,7 +463,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
