@@ -9,25 +9,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* ... your embedded blog styles unchanged ... */
-        .blog-hero 
-        <!-- Add after the existing profile image in the Blog Hero section -->
-<div style="flex-shrink: 0;">
-    <img src="images/maryam-profile.jpg" alt="Maryam Arif" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid #34d399; box-shadow: 0 10px 25px rgba(0,0,0,0.3);">
-    <img src="images/maryam-arif-portrait.jpg" alt="Maryam Arif Professional Portrait" style="margin-top: 1rem; width: 120px; border-radius: 15px; box-shadow: 0 8px 30px rgba(0,0,0,0.2);" />
-</div>
-        {
+        .blog-hero {
             background: linear-gradient(135deg, #023020 0%, #064e3b 50%, #022c22 100%);
             color: white;
             padding: 150px 0 100px 0;
             text-align: center;
         }
-        /* ... rest of your CSS ... */
+        .blog-hero img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #34d399;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
         .filter-btn.active,
         .filter-btn:hover {
             background: #059669;
             color: white;
         }
+        /* Other CSS styles */
     </style>
 </head>
 <body>
@@ -38,46 +39,28 @@
                 <h2><a href="index.html" style="color: inherit; text-decoration: none;">Maryam Arif</a></h2>
             </div>
             <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="index.html#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="index.html#experience" class="nav-link">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a href="index.html#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="index.html#achievements" class="nav-link">Achievements</a>
-                </li>
-                <li class="nav-item">
-                    <a href="blog.html" class="nav-link active">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a href="index.html#contact" class="nav-link">Contact</a>
-                </li>
+                <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="index.html#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="index.html#experience" class="nav-link">Experience</a></li>
+                <li class="nav-item"><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="index.html#achievements" class="nav-link">Achievements</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link active">Blog</a></li>
+                <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
         </div>
     </nav>
 
+    <!-- Back Button -->
     <a href="index.html" class="back-btn">
         <i class="fas fa-arrow-left"></i>
     </a>
 
-    <!-- Blog Hero -->
+    <!-- Blog Hero Section -->
     <section class="blog-hero">
         <div class="container">
             <div style="display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem;">
                 <div style="flex-shrink: 0;">
-                    <img src="images/maryam-profile.jpg" alt="Maryam Arif" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid #34d399; box-shadow: 0 10px 25px rgba(0,0,0,0.3);">
+                    <img src="images/maryam-arif-portrait.jpg" alt="Maryam Arif" />
                 </div>
                 <div style="text-align: center; flex-grow: 1;">
                     <h1><i class="fas fa-pen-fancy"></i> Blog & Writings</h1>
@@ -97,8 +80,8 @@
             <div class="featured-card">
                 <h3 class="featured-title">Women in the Business World: Challenges and Opportunities</h3>
                 <p class="featured-description">
-                    An in-depth analysis of the unique challenges women face in entrepreneurship and business leadership, 
-                    along with practical strategies for overcoming barriers and creating opportunities for success. 
+                    An in-depth analysis of the unique challenges women face in entrepreneurship and business leadership,
+                    along with practical strategies for overcoming barriers and creating opportunities for success.
                     Drawing from my experience empowering over 3,000 women through financial literacy programs.
                 </p>
                 <div class="stats-row">
@@ -122,7 +105,7 @@
         </div>
     </section>
 
-    <!-- Blog Articles -->
+    <!-- Blog Articles by Category -->
     <section style="padding: 80px 0;">
         <div class="container">
             <div class="section-header">
@@ -130,6 +113,7 @@
                 <p class="section-subtitle">Recent insights and thought leadership pieces</p>
             </div>
             
+            <!-- Category Filter -->
             <div class="category-filter">
                 <button class="filter-btn active">All</button>
                 <button class="filter-btn">Entrepreneurship</button>
@@ -138,8 +122,8 @@
                 <button class="filter-btn">History & Culture</button>
             </div>
 
+            <!-- Blog Grid -->
             <div class="blog-grid">
-                <!-- ... your blog cards ... -->
                 <!-- Entrepreneurship Articles -->
                 <div class="blog-card" data-category="entrepreneurship">
                     <div class="blog-image">
@@ -152,7 +136,7 @@
                         </div>
                         <h3 class="blog-title">The Entrepreneur's Blueprint: A Strategic Guide to Finding and Validating Your Next Business Idea</h3>
                         <p class="blog-excerpt">
-                            A comprehensive framework for identifying market opportunities and validating business concepts 
+                            A comprehensive framework for identifying market opportunities and validating business concepts
                             before investment, based on real-world experience building successful ventures.
                         </p>
                         <a href="https://bit.ly/4gwWjO2" target="_blank" class="blog-link">
@@ -160,28 +144,27 @@
                         </a>
                     </div>
                 </div>
-                <!-- ... rest of blog cards ... -->
-                <!-- (The rest of your blog cards remain unchanged from your code) -->
-                <!-- ... -->
-            </div>
 
-            <!-- Call to Action -->
-            <div style="text-align: center; margin-top: 4rem; padding: 3rem; background: #f9fafb; border-radius: 15px;">
-                <h3 style="color: #023020; margin-bottom: 1rem; font-size: 1.5rem;">Stay Updated</h3>
-                <p style="color: #4b5563; margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">
-                    Follow my journey and get insights on entrepreneurship, women's empowerment, and business development.
-                </p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="https://medium.com/@maryamarif" target="_blank" class="btn btn-primary">
-                        <i class="fab fa-medium"></i> Follow on Medium
-                    </a>
-                    <a href="https://bit.ly/4gwWjO2" target="_blank" class="btn btn-secondary">
-                        <i class="fas fa-newspaper"></i> Editorial Contributions
-                    </a>
-                </div>
+                <!-- Additional blog cards for other categories go here -->
             </div>
         </div>
     </section>
+
+    <!-- Stay Updated Section -->
+    <div style="text-align: center; margin-top: 4rem; padding: 3rem; background: #f9fafb; border-radius: 15px;">
+        <h3 style="color: #023020; margin-bottom: 1rem; font-size: 1.5rem;">Stay Updated</h3>
+        <p style="color: #4b5563; margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">
+            Follow my journey and get insights on entrepreneurship, women's empowerment, and business development.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="https://medium.com/@maryamarif" target="_blank" class="btn btn-primary">
+                <i class="fab fa-medium"></i> Follow on Medium
+            </a>
+            <a href="https://bit.ly/4gwWjO2" target="_blank" class="btn btn-secondary">
+                <i class="fas fa-newspaper"></i> Editorial Contributions
+            </a>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -196,50 +179,4 @@
                         <i class="fas fa-envelope"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/itsmaryamarif" target="_blank" class="social-link">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://medium.com/@maryamarif" target="_blank" class="social-link">
-                        <i class="fab fa-medium"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-    <script>
-        // Blog category filtering
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterBtns = document.querySelectorAll('.filter-btn');
-            const blogCards = document.querySelectorAll('.blog-card');
-
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    // Remove active class from all buttons
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    // Add active class to clicked button
-                    this.classList.add('active');
-
-                    const category = this.textContent.toLowerCase();
-
-                    blogCards.forEach(card => {
-                        if (category === 'all') {
-                            card.style.display = 'block';
-                        } else {
-                            const cardCategory = card.getAttribute('data-category');
-                            if (cardCategory === category || 
-                                (category === 'women\'s empowerment' && cardCategory === 'women') ||
-                                (category === 'business strategy' && cardCategory === 'strategy')) {
-                                card.style.display = 'block';
-                            } else {
-                                card.style.display = 'none';
-                            }
-                        }
-                    });
-                });
-            });
-        });
-    </script>
-</body>
-</html>
-
+                        <
