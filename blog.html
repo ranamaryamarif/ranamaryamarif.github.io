@@ -1,131 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Maryam Arif</title>
-    <meta name="description" content="Blog posts and articles by Maryam Arif on entrepreneurship, women's empowerment, and business development">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        .blog-hero {
-            background: linear-gradient(135deg, #023020 0%, #064e3b 50%, #022c22 100%);
-            color: white;
-            padding: 150px 0 100px 0;
-            text-align: center;
-        }
-        .blog-hero img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #34d399;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-        }
-        .filter-btn.active,
-        .filter-btn:hover {
-            background: #059669;
-            color: white;
-        }
-        /* Other CSS styles */
-    </style>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2><a href="index.html" style="color: inherit; text-decoration: none;">Maryam Arif</a></h2>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="index.html#about" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="index.html#experience" class="nav-link">Experience</a></li>
-                <li class="nav-item"><a href="index.html#projects" class="nav-link">Projects</a></li>
-                <li class="nav-item"><a href="index.html#achievements" class="nav-link">Achievements</a></li>
-                <li class="nav-item"><a href="blog.html" class="nav-link active">Blog</a></li>
-                <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
-            </ul>
+<!-- Blog Categories Section -->
+<section style="padding: 80px 0;">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Latest Articles</h2>
+            <p class="section-subtitle">Recent insights and thought leadership pieces</p>
         </div>
-    </nav>
 
-    <!-- Back Button -->
-    <a href="index.html" class="back-btn">
-        <i class="fas fa-arrow-left"></i>
-    </a>
-
-    <!-- Blog Hero Section -->
-    <section class="blog-hero">
-        <div class="container">
-            <div style="display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem;">
-                <div style="flex-shrink: 0;">
-                    <img src="images/maryam-arif-portrait.jpg" alt="Maryam Arif" />
-                </div>
-                <div style="text-align: center; flex-grow: 1;">
-                    <h1><i class="fas fa-pen-fancy"></i> Blog & Writings</h1>
-                    <p>Insights on entrepreneurship, women's empowerment, business development, and social impact from my journey as a business leader and social entrepreneur.</p>
-                </div>
-            </div>
+        <!-- Category Filter -->
+        <div class="category-filter">
+            <button class="filter-btn active" onclick="filterArticles('all')">All</button>
+            <button class="filter-btn" onclick="filterArticles('entrepreneurship')">Entrepreneurship</button>
+            <button class="filter-btn" onclick="filterArticles('womens-empowerment')">Women's Empowerment</button>
+            <button class="filter-btn" onclick="filterArticles('business-strategy')">Business Strategy</button>
+            <button class="filter-btn" onclick="filterArticles('history-culture')">History & Culture</button>
         </div>
-    </section>
 
-    <!-- Featured Article -->
-    <section class="featured-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Featured Writing</h2>
-                <p class="section-subtitle">Highlighting key insights and impactful content</p>
-            </div>
-            <div class="featured-card">
-                <h3 class="featured-title">Women in the Business World: Challenges and Opportunities</h3>
-                <p class="featured-description">
-                    An in-depth analysis of the unique challenges women face in entrepreneurship and business leadership,
-                    along with practical strategies for overcoming barriers and creating opportunities for success.
-                    Drawing from my experience empowering over 3,000 women through financial literacy programs.
-                </p>
-                <div class="stats-row">
-                    <div class="stat-badge">
-                        <h4>3,000+</h4>
-                        <p>Women Reached</p>
-                    </div>
-                    <div class="stat-badge">
-                        <h4>15%</h4>
-                        <p>Business Growth</p>
-                    </div>
-                    <div class="stat-badge">
-                        <h4>25%</h4>
-                        <p>Improved Outreach</p>
-                    </div>
-                </div>
-                <a href="https://bit.ly/4gwWjO2" target="_blank" class="blog-link">
-                    Read Full Article <i class="fas fa-external-link-alt"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog Articles by Category -->
-    <section style="padding: 80px 0;">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Latest Articles</h2>
-                <p class="section-subtitle">Recent insights and thought leadership pieces</p>
-            </div>
-            
-            <!-- Category Filter -->
-            <div class="category-filter">
-                <button class="filter-btn active">All</button>
-                <button class="filter-btn">Entrepreneurship</button>
-                <button class="filter-btn">Women's Empowerment</button>
-                <button class="filter-btn">Business Strategy</button>
-                <button class="filter-btn">History & Culture</button>
-            </div>
-
-            <!-- Blog Grid -->
+        <!-- Blog Sections -->
+        <div id="entrepreneurship" class="blog-section">
+            <h3>Entrepreneurship</h3>
             <div class="blog-grid">
-                <!-- Entrepreneurship Articles -->
-                <div class="blog-card" data-category="entrepreneurship">
+                <div class="blog-card">
                     <div class="blog-image">
                         <i class="fas fa-lightbulb"></i>
                     </div>
@@ -136,47 +30,54 @@
                         </div>
                         <h3 class="blog-title">The Entrepreneur's Blueprint: A Strategic Guide to Finding and Validating Your Next Business Idea</h3>
                         <p class="blog-excerpt">
-                            A comprehensive framework for identifying market opportunities and validating business concepts
-                            before investment, based on real-world experience building successful ventures.
+                            A comprehensive framework for identifying market opportunities and validating business concepts before investment, based on real-world experience building successful ventures.
                         </p>
                         <a href="https://bit.ly/4gwWjO2" target="_blank" class="blog-link">
                             Read More <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
-
-                <!-- Additional blog cards for other categories go here -->
+                <!-- Add more entrepreneurship articles here -->
             </div>
         </div>
-    </section>
 
-    <!-- Stay Updated Section -->
-    <div style="text-align: center; margin-top: 4rem; padding: 3rem; background: #f9fafb; border-radius: 15px;">
-        <h3 style="color: #023020; margin-bottom: 1rem; font-size: 1.5rem;">Stay Updated</h3>
-        <p style="color: #4b5563; margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">
-            Follow my journey and get insights on entrepreneurship, women's empowerment, and business development.
-        </p>
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-            <a href="https://medium.com/@maryamarif" target="_blank" class="btn btn-primary">
-                <i class="fab fa-medium"></i> Follow on Medium
-            </a>
-            <a href="https://bit.ly/4gwWjO2" target="_blank" class="btn btn-secondary">
-                <i class="fas fa-newspaper"></i> Editorial Contributions
-            </a>
+        <div id="womens-empowerment" class="blog-section" style="display: none;">
+            <h3>Women's Empowerment</h3>
+            <div class="blog-grid">
+                <!-- Add your Women's Empowerment Articles here -->
+            </div>
+        </div>
+
+        <div id="business-strategy" class="blog-section" style="display: none;">
+            <h3>Business Strategy</h3>
+            <div class="blog-grid">
+                <!-- Add your Business Strategy Articles here -->
+            </div>
+        </div>
+
+        <div id="history-culture" class="blog-section" style="display: none;">
+            <h3>History & Culture</h3>
+            <div class="blog-grid">
+                <!-- Add your History & Culture Articles here -->
+            </div>
         </div>
     </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-text">
-                    <p>&copy; 2025 Maryam Arif. All rights reserved.</p>
-                    <p>Empowering communities through business innovation and social impact.</p>
-                </div>
-                <div class="footer-social">
-                    <a href="mailto:ranamaryamarif@gmail.com" class="social-link">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/itsmaryamarif" target="_blank" class="social-link">
-                        <
+<script>
+    // Filter articles by category
+    function filterArticles(category) {
+        const sections = document.querySelectorAll('.blog-section');
+        sections.forEach(section => {
+            if (category === 'all') {
+                section.style.display = 'block';
+            } else {
+                if (section.id === category) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            }
+        });
+    }
+</script>
