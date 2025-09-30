@@ -9,13 +9,57 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        .blog-navbar {
+            background: #023020;
+            padding: 0.5rem 0;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.03);
+        }
+        .blog-navbar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .blog-navbar-logo {
+            color: #34d399;
+            font-weight: 700;
+            font-size: 1.3rem;
+            text-decoration: none;
+        }
+        .blog-navbar-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .blog-navbar-menu li a {
+            color: #f3f4f6;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        .blog-navbar-menu li a:hover,
+        .blog-navbar-menu li a.active {
+            color: #34d399;
+        }
+        @media (max-width: 700px) {
+            .blog-navbar-container {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .blog-navbar-menu {
+                gap: 1rem;
+            }
+        }
         .blog-hero-gallery {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 3rem;
             flex-wrap: wrap;
-            padding: 80px 0 40px 0;
+            padding: 60px 0 40px 0;
             background: linear-gradient(135deg, #023020 0%, #064e3b 50%, #022c22 100%);
         }
         .blog-hero-gallery img {
@@ -31,7 +75,7 @@
             color: white;
         }
         .blog-hero-gallery .hero-text h1 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-weight: 700;
             color: #34d399;
             margin-bottom: 1rem;
@@ -138,6 +182,22 @@
     </style>
 </head>
 <body>
+    <!-- Blog Navigation Bar (matches homepage navigation) -->
+    <nav class="blog-navbar">
+        <div class="blog-navbar-container">
+            <a href="index.html" class="blog-navbar-logo">Maryam Arif</a>
+            <ul class="blog-navbar-menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="index.html#achievements">Achievements</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- Blog Hero Gallery -->
     <div class="blog-hero-gallery">
         <img src="maryam-arif-portrait.jpg" alt="Maryam Arif Professional Portrait" />
@@ -191,7 +251,6 @@
             <div id="womens-empowerment" class="blog-section" style="display: none;">
                 <h3>Women's Empowerment</h3>
                 <div class="blog-grid">
-                    <!-- Example Article -->
                     <div class="blog-card">
                         <div class="blog-image"><i class="fas fa-users"></i></div>
                         <div class="blog-content">
@@ -214,7 +273,6 @@
             <div id="business-strategy" class="blog-section" style="display: none;">
                 <h3>Business Strategy</h3>
                 <div class="blog-grid">
-                    <!-- Example Article -->
                     <div class="blog-card">
                         <div class="blog-image"><i class="fas fa-handshake"></i></div>
                         <div class="blog-content">
@@ -237,7 +295,6 @@
             <div id="history-culture" class="blog-section" style="display: none;">
                 <h3>History & Culture</h3>
                 <div class="blog-grid">
-                    <!-- Example Article -->
                     <div class="blog-card">
                         <div class="blog-image"><i class="fas fa-globe"></i></div>
                         <div class="blog-content">
